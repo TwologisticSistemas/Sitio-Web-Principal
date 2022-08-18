@@ -190,7 +190,7 @@ h5,
 
 .site-footer {
   padding: 4em 0;
-  background: #4EB9B2;
+  background: #4eb9b2;
 }
 @media (min-width: 768px) {
   .site-footer {
@@ -755,7 +755,6 @@ h5,
 
 /* Blocks */
 .site-blocks-cover {
-  
   background-repeat: no-repeat;
   background-position: top;
   background-position: center center;
