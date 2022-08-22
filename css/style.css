@@ -755,9 +755,8 @@ h5,
 
 /* Blocks */
 .site-blocks-cover {
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: top;
-  background-position: center center;
 }
 .site-blocks-cover.overlay {
   position: relative;
