@@ -190,7 +190,7 @@ h5,
 
 .site-footer {
   padding: 4em 0;
-  background: #4eb9b2;
+  background: #2B3F54;
 }
 @media (min-width: 768px) {
   .site-footer {
@@ -369,7 +369,7 @@ h5,
   z-index: 1999;
   position: absolute;
   width: 100%;
-  background: #4eb9b2;
+  background: #2B3F54;
 }
 .site-navbar.transparent {
   background: transparent;
@@ -392,9 +392,7 @@ h5,
 .site-navbar .site-navigation .site-menu {
   margin-bottom: 0;
 }
-.site-navbar .site-navigation .site-menu .active > a {
-  color: #2b3f54;
-}
+
 .site-navbar .site-navigation .site-menu a {
   text-decoration: none !important;
   display: inline-block;
