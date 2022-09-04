@@ -1,5 +1,5 @@
 <?php
-enviar_email($_POST['nombre'], $_POST['apellido'], $_POST['email'], $_POST['asunto'], $_POST['mensaje']);
+enviar_email($_POST['nombre'], $_POST['apellido'], $_POST['email'], $_POST['asunto'], $_POST['message']);
 function enviar_email($nombre, $apellidos, $correo, $asunto, $mensaje)
 {
   $destinatario = 'juanpablodejesus_figueroa@ucol.mx';
@@ -133,74 +133,16 @@ function enviar_email($nombre, $apellidos, $correo, $asunto, $mensaje)
                         href="#"
                         style="color: #ff2b06; text-decoration: underline"
                         >' . $correo . '</a
-                      >, por lo que su mensaje enviado y su pregunta es: 
-                    </p>
-                    <br>
-                    <p>
+                      >, por lo que su mensaje enviado y su pregunta es: <br>
                       ' . $mensaje . '
                     </p>
+                    <br>
+
 
                   </td>
                 </tr>
 
-                <tr>
-                  <td
-                    style="
-                      padding: 35px 30px 11px 30px;
-                      font-size: 0;
-                      background-color: #ffffff;
-                      border-bottom: 1px solid #f0f0f5;
-                      border-color: rgba(201, 201, 207, 0.35);
-                    "
-                  >
-                    <div
-                      class="col-sml"
-                      style="
-                        display: inline-block;
-                        width: 100%;
-                        max-width: 145px;
-                        vertical-align: top;
-                        text-align: left;
-                        font-family: Arial, sans-serif;
-                        font-size: 14px;
-                        color: #363636;
-                      "
-                    ></div>
-                    <div
-                      class="col-lge"
-                      style="
-                        display: inline-block;
-                        width: 100%;
-                        max-width: 395px;
-                        vertical-align: top;
-                        padding-bottom: 20px;
-                        font-family: Arial, sans-serif;
-                        font-size: 16px;
-                        line-height: 22px;
-                        color: #363636;
-                      "
-                    >
-                      <p style="margin: 0">
-                        <a
-                          href="https://example.com/"
-                          style="
-                            background: #00aaa1;
-                            text-decoration: none;
-                            padding: 10px 25px;
-                            color: #ffffff;
-                            border-radius: 4px;
-                            display: inline-block;
-                            mso-padding-alt: 0;
-                            text-underline-color: #ff3884;
-                          "
-                          ><span style="mso-text-raise: 10pt; font-weight: bold"
-                            >Ingresar al sistema</span
-                          ></a
-                        >
-                      </p>
-                    </div>
-                  </td>
-                </tr>
+
                 <tr>
                   <td
                     style="
@@ -234,11 +176,11 @@ function enviar_email($nombre, $apellidos, $correo, $asunto, $mensaje)
                       /></a>
                     </p>
                     <p style="margin: 0; font-size: 14px; line-height: 20px">
-                      &reg; Gruposoca, todos los derechos reservados 2022<br /><a
+                      &reg; Twologistic, todos los derechos reservados 2022<br /><a
                         class="unsub"
-                        href="http://www.example.com/"
+                        href="https://twologistic.com/"
                         style="color: #fff; text-decoration: underline"
-                        >www.gruposoca.com.mx</a
+                        >www.twologistic.com</a
                       >
                     </p>
                   </td>
@@ -257,5 +199,5 @@ function enviar_email($nombre, $apellidos, $correo, $asunto, $mensaje)
   //dirección del remitente 
   $headers .= "From: Sitio web <sistemas@twologistic.com>\r\n";
   mail($destinatario, $asunto, $cuerpo, $headers);
-  header("Location: ../contac.html");
+  header("Location: ../contact.html");
 }
