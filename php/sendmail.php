@@ -251,18 +251,14 @@ function enviar_email($nombre, $apellidos, $correo, $asunto, $mensaje)
     </body>
   </html>
   ';
-
   //para el envío en formato HTML 
   $headers = "MIME-Version: 1.0\r\n";
   $headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
-
   //dirección del remitente 
   $headers .= "From: Sitio web <sistemas@twologistic.com>\r\n";
-
-
-
-
-
-
-  mail($destinatario, $asunto, $cuerpo, $headers);
+  if (mail($destinatario, $asunto, $cuerpo, $headers)) {
+    echo 1;
+  } else {
+    echo 2;
+  }
 }
