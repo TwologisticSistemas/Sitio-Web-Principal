@@ -149,32 +149,10 @@ function enviar_email($nombre, $apellidos, $correo, $asunto, $mensaje)
                       padding: 30px;
                       text-align: center;
                       font-size: 12px;
-                      background-color: #ff2b06;
+                      background-color: #2B3F54;
                       color: #fff;
                     "
                   >
-                    <p style="margin: 0 0 8px 0">
-                      <a
-                        href="http://www.facebook.com/"
-                        style="text-decoration: none"
-                        ><img
-                          src="images/facebook.png"
-                          width="40"
-                          height="40"
-                          alt="f"
-                          style="display: inline-block; color: #fff"
-                      /></a>
-                      <a
-                        href="http://www.twitter.com/"
-                        style="text-decoration: none"
-                        ><img
-                          src="images/twitter.png"
-                          width="40"
-                          height="40"
-                          alt="t"
-                          style="display: inline-block; color: #fff"
-                      /></a>
-                    </p>
                     <p style="margin: 0; font-size: 14px; line-height: 20px">
                       &reg; Twologistic, todos los derechos reservados 2022<br /><a
                         class="unsub"
