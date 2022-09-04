@@ -16,7 +16,6 @@
     <link href="fonts/flaticon/font/flaticon.css" rel="stylesheet" />
     <link href="css/aos.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
-    <link href="lib/sweetalert2/sweetalert2.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -71,7 +70,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-7 mb-5">
-                        <form class="p-5 bg-white" id="formEnviarMail">
+                        <form class="p-5 bg-white" action="php/sendmail.php">
                             <div class="row form-group">
                                 <div class="col-md-6 mb-3 mb-md-0">
                                     <label class="text-black" for="fname">Nombre</label>
@@ -203,75 +202,6 @@
     <script src="js/bootstrap-datepicker.min.js"></script>
     <script src="js/aos.js"></script>
     <script src="js/main.js"></script>
-    <script src="lib/sweetalert2/sweetalert2.all.min.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-      document
-        .getElementById("formEnviarMail")
-        .addEventListener("submit", formEnviarMail);
-    });
-    async function formEnviarMail(e) {
-      e.preventDefault();
-      var form = document.getElementById("formEnviarMail");
-      const swalWithBootstrapButtons = Swal.mixin({
-        customClass: {
-          confirmButton: "btn btn-success",
-          cancelButton: "btn btn-danger",
-        },
-        buttonsStyling: false,
-      });
-      swalWithBootstrapButtons
-        .fire({
-          title: "Estas seguro que la información es la correcta?",
-          icon: "warning",
-          showCancelButton: true,
-          confirmButtonText: "Si, enviar mensaje",
-          cancelButtonText: "No, cancelar!",
-          reverseButtons: true,
-        })
-        .then((result) => {
-          if (result.isConfirmed) {
-            let data = new FormData(form);
-            fetch("php/sendmail.php", {
-                method: "POST",
-                body: data,
-              })
-              .then((result) => result.text())
-              .then((result) => {
-                if (result == 1) {
-                  swalWithBootstrapButtons.fire(
-                    "Enviado!",
-                    "Tu mensaje ha sido enviado, muchas gracias :)!.",
-                    "success"
-                  );
-                  form.reset();
-                  setTimeout(function() {
-                    location.reload();
-                  }, 2000);
-                } else {
-                  swalWithBootstrapButtons.fire(
-                    "Error",
-                    "Hemos tenido un error a la base de datos o la conexión.",
-                    "error"
-                  );
-                  // form.reset();
-                  // setTimeout(function() {
-                  //     location.reload();
-                  // }, 2000);
-                }
-              });
-          } else if (
-            /* Read more about handling dismissals below */
-            result.dismiss === Swal.DismissReason.cancel
-          ) {
-            swalWithBootstrapButtons.fire(
-              "Cancelado",
-              "Revise su información de nuevo",
-              "error"
-            );
-          }
-        });
-    }
-    </script>
+  
   </body>
 </html>
