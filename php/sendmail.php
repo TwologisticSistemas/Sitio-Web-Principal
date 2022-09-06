@@ -2,7 +2,7 @@
 enviar_email($_POST['nombre'], $_POST['apellido'], $_POST['email'], $_POST['asunto'], $_POST['message']);
 function enviar_email($nombre, $apellidos, $correo, $asunto, $mensaje)
 {
-  $destinatario = 'juanpablodejesus_figueroa@ucol.mx';
+  $destinatario = 'comercial@twologistic.com';
   $cuerpo = ' 
   <!DOCTYPE html>
   <html
